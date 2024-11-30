@@ -1,4 +1,4 @@
-# go.dave.io
+# `go.dave.io`
 
 Redirect worker to execute redirects for `https://go.dave.io/{slug}`.
 
