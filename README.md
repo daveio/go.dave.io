@@ -1,4 +1,6 @@
-# Cloudflare Workers OpenAPI 3.1
+# go.dave.io
+
+Redirect worker to execute redirects for `https://go.dave.io/{slug}`.
 
 This is a Cloudflare Worker with OpenAPI 3.1 using [chanfana](https://github.com/cloudflare/chanfana) and [Hono](https://github.com/honojs/hono).
 
