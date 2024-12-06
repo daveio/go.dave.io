@@ -28,7 +28,7 @@ export class Go extends OpenAPIRoute {
     const response = await fetch("https://api.dave.io/url/" + slug);
     const result = await parseResponse(response);
     if (result === null || result.success === false) {
-      return Response.json({}, { status: 404 });
+      return new Response(null, { status: 404 });
     } else {
       return Response.redirect(result.redirect.url, 302);
     }
