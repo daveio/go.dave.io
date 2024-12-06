@@ -32,7 +32,7 @@ export class Go extends OpenAPIRoute {
     } else if (typeof dest === "string") {
       return Response.redirect(dest, 302);
     } else {
-      return Response.json({}, { status: 500 });
+      return Response.json({ dest }, { status: 500 });
     }
     //});
   }
