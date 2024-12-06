@@ -42,7 +42,7 @@ async function fetchURL(slug) {
   let dest = await fetch("https://api.dave.io/url/" + slug);
   if (dest.ok) {
     let json = dest.json();
-    return await json;
+    return json;
   } else {
     return null;
   }
