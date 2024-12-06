@@ -17,7 +17,6 @@ export class Go extends OpenAPIRoute {
       },
       "404": {
         description: "Redirect not found",
-        content: {},
       },
     },
   };
