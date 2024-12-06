@@ -44,7 +44,8 @@ function fetchURL(slug) {
     if (response.ok) {
       let json = response.json();
       return json;
+    } else {
+      return null;
     }
   });
-  return "https://fartbox.org";
 }
