@@ -38,7 +38,7 @@ export class Go extends OpenAPIRoute {
   }
 }
 
-function fetchURL(slug) {
+async function fetchURL(slug) {
   let dest = fetch("https://api.dave.io/url/" + slug);
   dest.then((response) => {
     if (response.ok) {
