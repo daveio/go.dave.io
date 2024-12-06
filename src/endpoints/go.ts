@@ -26,18 +26,18 @@ export class Go extends OpenAPIRoute {
     const data = await this.getValidatedData<typeof this.schema>();
     const { slug } = data.params;
     let dest = fetchURL(slug);
-    dest.then((url) => {
-      if (url === null) {
-        return Response.json({}, { status: 404 });
-      } else if (typeof url === "string") {
-        return Response.redirect(url, 302);
-      } else {
-        return Response.json({}, { status: 500 });
-      }
-    });
+    // dest.then((url) => {
+    if (dest === null) {
+      return Response.json({}, { status: 404 });
+    } else if (typeof dest === "string") {
+      return Response.redirect(dest, 302);
+    } else {
+      return Response.json({}, { status: 500 });
+    }
+    //});
   }
 }
 
-async function fetchURL(slug) {
+function fetchURL(slug) {
   return "https://fartbox.org";
 }

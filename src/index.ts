@@ -11,7 +11,7 @@ const openapi = fromHono(app, {
 });
 
 // Register OpenAPI endpoints
-openapi.get("/go/:slug", Go);
+openapi.get("/:slug", Go);
 
 // Export the Hono app
 export default app;
