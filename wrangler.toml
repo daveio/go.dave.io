@@ -12,6 +12,10 @@ enabled = true
 [placement]
 mode = "smart"
 
+[[routes]]
+pattern = "go.dave.io"
+custom_domain = true
+
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Docs:
 # - https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
