@@ -13,7 +13,6 @@ export class Go extends OpenAPIRoute {
     responses: {
       "302": {
         description: "Redirects to a URL",
-        content: {},
       },
       "404": {
         description: "Redirect not found",
@@ -30,8 +29,8 @@ export class Go extends OpenAPIRoute {
       if (result.success) {
         return Response.redirect(result.redirect.url, 302);
       }
-      return new Response(null, { status: 404 });
     }
+    return new Response(null, { status: 404 });
   }
 
   async parseResponse(response) {
