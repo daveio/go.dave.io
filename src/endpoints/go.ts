@@ -1,6 +1,5 @@
-import { Bool, OpenAPIRoute, Str } from "chanfana";
+import { OpenAPIRoute, Str } from "chanfana";
 import { z } from "zod";
-import { Redirect } from "../types";
 
 export class Go extends OpenAPIRoute {
   schema = {
