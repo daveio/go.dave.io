@@ -26,15 +26,16 @@ export class Go extends OpenAPIRoute {
     const data = await this.getValidatedData<typeof this.schema>();
     const { slug } = data.params;
     const response = await fetch("https://api.dave.io/url/" + slug);
-    const result = await parseResponse(response);
-    if (result === null || result.success === false) {
+    if (response.ok) {
+      const result = await this.parseResponse(response);
+      if (result.success) {
+        return Response.redirect(result.redirect.url, 302);
+      }
       return new Response(null, { status: 404 });
-    } else {
-      return Response.redirect(result.redirect.url, 302);
     }
   }
-}
 
-async function parseResponse(response) {
-  return await response.json();
+  async parseResponse(response) {
+    return await response.json();
+  }
 }
