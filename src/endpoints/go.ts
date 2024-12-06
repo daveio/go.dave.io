@@ -39,5 +39,12 @@ export class Go extends OpenAPIRoute {
 }
 
 function fetchURL(slug) {
+  let dest = fetch("https://api.dave.io/url/" + slug);
+  dest.then((response) => {
+    if (response.ok) {
+      let json = response.json();
+      return json;
+    }
+  });
   return "https://fartbox.org";
 }
