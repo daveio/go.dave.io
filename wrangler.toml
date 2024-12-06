@@ -18,7 +18,7 @@ custom_domain = true
 
 [[routes]]
 pattern = "dave.io/go/*"
-zone_id = "dave.io"
+zone_id = "cce768dd1ffadb4f24ae8fce0f7e979a"
 
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Docs:
