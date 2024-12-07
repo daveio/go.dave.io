@@ -1,6 +1,7 @@
 import { fromHono } from "chanfana";
 import { Hono } from "hono";
 import { Go } from "./endpoints/go";
+import { Ping } from "./endpoints/ping";
 
 // Start a Hono app
 const app = new Hono();
@@ -11,6 +12,7 @@ const openapi = fromHono(app, {
 });
 
 // Register OpenAPI endpoints
+openapi.get("/ping", Ping);
 openapi.get("/:slug", Go);
 openapi.get("/go/:slug", Go);
 
