@@ -13,6 +13,7 @@ const openapi = fromHono(app, {
 
 // Register OpenAPI endpoints
 openapi.get("/ping", Ping);
+openapi.get("/go/ping", Ping);
 openapi.get("/:slug", Go);
 openapi.get("/go/:slug", Go);
 
