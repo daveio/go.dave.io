@@ -1,4 +1,4 @@
-import type { OpenAPIRoute } from "chanfana";
+import { OpenAPIRoute } from "chanfana";
 import { z } from "zod";
 import type { Context } from "hono";
 
