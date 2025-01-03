@@ -1,5 +1,5 @@
 import { OpenAPIRoute, Str } from "chanfana";
-import { any, z } from "zod";
+import { z } from "zod";
 
 export class Go extends OpenAPIRoute {
 	schema = {
@@ -9,7 +9,9 @@ export class Go extends OpenAPIRoute {
 			params: z.object({
 				slug: Str({ description: "Redirect slug" }),
 			}),
-			// query: z.object({ fbclid: Str({ description: "Facebook Click ID" }) }),
+			query: z.object({
+				fbclid: Str({ description: "Facebook Click ID", required: false }),
+			}),
 		},
 		responses: {
 			"302": {
