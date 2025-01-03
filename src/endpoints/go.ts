@@ -1,5 +1,5 @@
 import { OpenAPIRoute, Str } from "chanfana";
-import { z } from "zod";
+import { any, z } from "zod";
 
 export class Go extends OpenAPIRoute {
 	schema = {
@@ -9,6 +9,7 @@ export class Go extends OpenAPIRoute {
 			params: z.object({
 				slug: Str({ description: "Redirect slug" }),
 			}),
+			query: z.object({ fbclid: Str({ description: "Facebook Click ID" }) }),
 		},
 		responses: {
 			"302": {
@@ -22,6 +23,7 @@ export class Go extends OpenAPIRoute {
 
 	async handle(c) {
 		const data = await this.getValidatedData<typeof this.schema>();
+		console.log(data);
 		const { slug } = data.params;
 		const response = await fetch(`https://api.dave.io/url/${slug}`);
 		if (response.ok) {
