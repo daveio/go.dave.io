@@ -3,4 +3,4 @@
 // eslint-disable-next-line @typescript-eslint/no-empty-interface,@typescript-eslint/no-empty-object-type
 /* trunk-ignore(rome/lint/suspicious/noEmptyInterface) */
 /* trunk-ignore(biome/lint/suspicious/noEmptyInterface) */
-interface Env {}
+type Env = {};

@@ -1,7 +1,7 @@
 import { fromHono } from "chanfana";
 import { Hono } from "hono";
-import { Ping } from "./endpoints/ping";
 import { Go } from "./endpoints/go";
+import { Ping } from "./endpoints/ping";
 
 // Start a Hono app
 const app = new Hono();
