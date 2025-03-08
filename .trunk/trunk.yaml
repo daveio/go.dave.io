@@ -1,21 +1,9 @@
 actions:
-  definitions:
-    - description: Git LFS hooks
-      display_name: Git LFS
-      id: git-lfs
-      run: git lfs "${hook}" "${@}"
-      triggers:
-        - git_hooks:
-            - post-checkout
-            - post-commit
-            - post-merge
-            - pre-push
   enabled:
     - trunk-announce
     - trunk-check-pre-push
     - trunk-fmt-pre-commit
     - trunk-upgrade-available
-    - git-lfs
 cli:
   version: 1.22.10
 lint:
