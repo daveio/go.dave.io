@@ -55,3 +55,8 @@ runtimes:
     - node@18.20.5
     - python@3.10.8
 version: 0.1
+merge:
+  required_statuses:
+    - CodeQL
+    - devskim
+    - codacy
