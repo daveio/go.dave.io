@@ -23,11 +23,11 @@
 		"@types/node": "22.13.10",
 		"@types/service-worker-mock": "^2.0.4",
 		"stylelint-config-standard": "^37.0.0",
-		"wrangler": "4.1.0"
+		"wrangler": "4.2.0"
 	},
 	"packageManager": "bun@1.2.5",
 	"engines": {
-		"bun": "~1.2.4",
+		"bun": "~1.2.5",
 		"node": "~22.14.0"
 	},
 	"trustedDependencies": []
