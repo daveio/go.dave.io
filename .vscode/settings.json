@@ -8,5 +8,6 @@
 		"dlv": "${workspaceFolder}/.vscode/mise-tools/dlv",
 		"gopls": "${workspaceFolder}/.vscode/mise-tools/gopls"
 	},
-	"workbench.colorCustomizations": {}
+	"workbench.colorCustomizations": {},
+	"python.defaultInterpreterPath": "${workspaceFolder}/.vscode/mise-tools/python"
 }
