@@ -1,5 +1,14 @@
 import { OpenAPIRoute, Str } from "chanfana"
+import type { Context } from "hono"
 import { z } from "zod"
+
+// Define interfaces for the response structure
+interface RedirectResponse {
+  success: boolean
+  redirect: {
+    url: string
+  }
+}
 
 export class Go extends OpenAPIRoute {
   schema = {
@@ -23,7 +32,7 @@ export class Go extends OpenAPIRoute {
     }
   }
 
-  async handle(c) {
+  async handle(_c: Context): Promise<Response> {
     const data = await this.getValidatedData<typeof this.schema>()
     const { slug } = data.params
     const response = await fetch(`https://api.dave.io/redirect/${slug}`)
@@ -36,7 +45,7 @@ export class Go extends OpenAPIRoute {
     return new Response(null, { status: 404 })
   }
 
-  async parseResponse(response) {
-    return await response.json()
+  async parseResponse(response: Response): Promise<RedirectResponse> {
+    return (await response.json()) as RedirectResponse
   }
 }
