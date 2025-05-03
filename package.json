@@ -8,7 +8,7 @@
   "author": "Dave Williams <dave@dave.io>",
   "type": "module",
   "scripts": {
-    "cf-typegen": "bun run wrangler types",
+    "types": "bun run wrangler types",
     "deploy": "bun run wrangler deploy",
     "dev": "bun run wrangler dev",
     "start": "bun run wrangler dev"
