@@ -1,0 +1,19 @@
+---
+description: Package and project managers to use and any caveats.
+globs:
+alwaysApply: true
+---
+
+# Package Managers
+
+These rules define which package and project managers to use for various languages and frameworks, and any caveats or exceptions that may apply.
+
+## Languages and frameworks
+
+### JavaScript and TypeScript
+
+Use the `bun` package manager for JavaScript and TypeScript projects. When writing scripts for example in `package.json`, use `bun run` instead of just bare `bun` to be specific.
+
+### Python
+
+Use the `uv` tool to initialise Python projects and manage them. Migrate to `uv` where possible. Ensure that the package definitions use manager-nonspecific directives where possible, and `uv`-specific directives where not and the file can't be restructured to use generic directives.

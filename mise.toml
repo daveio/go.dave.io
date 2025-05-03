@@ -6,3 +6,4 @@ env_file = '.env'
 
 [tools]
 node = '23.11.0'
+bun = '1.2.11'
