@@ -2,7 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "go-dave-io",
   "main": "src/index.ts",
-  "compatibility_date": "2025-04-28",
+  "compatibility_date": "2025-05-07",
   "compatibility_flags": ["nodejs_compat"],
   "observability": {
     "enabled": true,
@@ -14,10 +14,6 @@
     {
       "pattern": "go.dave.io",
       "custom_domain": true,
-    },
-    {
-      "pattern": "go.dave.io",
-      "zone_id": "cce768dd1ffadb4f24ae8fce0f7e979a",
     },
   ],
 }
