@@ -6,4 +6,4 @@ env_file = '.env'
 
 [tools]
 node = { version = '22.15.0' }
-bun = '1.2.12'
+bun = { version = '1.2.13' }
